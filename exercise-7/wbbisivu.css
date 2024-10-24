@@ -1,0 +1,69 @@
+body {
+    background-color: rgb(86, 71, 140);
+}
+
+h1 {
+    text-align: center;
+    background-color: white;
+}
+.box {
+    display: block;
+    width: 650px;
+    height: 450px;
+    border: 1px solid black;
+    background-color: rgb(59, 68, 190);
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    width: 100%;
+    height: 100%; 
+
+}
+#wanna_be_pallo {
+    position: relative;
+    border: 4px solid black;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    background-color: whitesmoke;
+    margin-top: 200px;
+    text-align: center;
+}
+#wanna_be_palloB {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    /*display: inline-block;*/ /*kommentoin tämän kohdan pois, koska se herjasi floatista 31.8 Jesse*/
+    background-color: whitesmoke;
+    margin-top: 200px;
+    float:right;
+    text-align: center;
+}
+p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#A {
+    color: rgb(255, 0, 0);
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#B {
+    color: rgb(0, 0, 255);
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#Kuvagalleria {
+    background-color: rgb(86, 71, 140);
+    color: white;
+}

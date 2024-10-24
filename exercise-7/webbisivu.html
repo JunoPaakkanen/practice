@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="wbbisivu.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="webbisivu.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuvagalleria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="wbbisivu.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="Kuvagalleria">Kuvagalleria</h1>
+        <div class="wrapper">
+            <div class="box">
+                <img id="kuva_id" src="aloistusivu.jpg" alt="kuva">
+            </div>
+        </div>  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<div id="wanna_be_pallo">
+    <p id="A">A<br>
+    Start</p>
+</div>
+<div id="wanna_be_palloB">
+    <p id="B">B<br> Skip</p>
+</div>
+
+<script>	
+    $(document).ready(function(){
+        const $kuvat = ["kissa.jpg","lasipallo.jpg", "kermit.jpg", "lexuslfa.jpg"];
+        let $laskuri= 0;
+        $.getJSON("data.json", function(data){
+            console.log(data.AA);
+            console.log(data.BB);
+            if ((data.AA) == (data.REF)){
+                console.log("AA nappia painettiin")
+                $("#kuva_id").attr("src", $kuvat[0]);
+                $laskuri =1;
+            }
+            if ((data.BB) == (data.REF)){
+                console.log("BB nappia painettiin")
+                $("#kuva_id").attr("src", $kuvat[$laskuri]);
+                $laskuri+=1;
+        
+                    if ($laskuri>= $kuvat.length) {
+                        $laskuri =0;
+            
+                    }
+            }
+        }).fail(function(){
+            console.log("Ongelma");
+        });
+    });
+</script>
+
+</body>
+</html>
