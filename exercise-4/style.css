@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(33, 56, 104);
+}
+
+h1 {
+  color: rgb(218, 62, 14);
+  margin-left: 20px;
+}
+
+select {
+  font: 17px Calibri;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ff8787;
+  border-radius: 4px;
+}
+
+input[type="button"] {
+  font: 17px Calibri;
+  width: auto;
+  float: right;
+  cursor: pointer;
+  padding: 7px;
+  color: crimson;
+}
